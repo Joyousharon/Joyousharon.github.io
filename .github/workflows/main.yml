@@ -18,7 +18,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: "18" # 设置 Node.js 版本
+          node-version: "16" # 设置 Node.js 版本
 
       - name: Cache dependencies
         uses: actions/cache@v2
@@ -33,7 +33,7 @@ jobs:
         working-directory: ./blog
 
       - name: Install Hexo CLI
-        run: cpm install -g hexo-cli
+        run: npm install -g hexo-cli
         working-directory: ./blog
 
       - name: Generate static pages
@@ -47,4 +47,3 @@ jobs:
           publish_dir: ./blog/public
           external_repository: Joyousharon/Joyousharon.github.io # 更改为你的 GitHub Pages 仓库, username 是你的用户名
           publish_branch: main # GitHub Pages 分支
-
