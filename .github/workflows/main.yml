@@ -33,7 +33,7 @@ jobs:
         working-directory: ./blog
 
       - name: Install Hexo CLI
-        run: npm install -g hexo-cli
+        run: cpm install -g hexo-cli
         working-directory: ./blog
 
       - name: Generate static pages
